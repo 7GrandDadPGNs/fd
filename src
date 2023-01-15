@@ -39,3 +39,34 @@ end
         getgenv().l = false
     end
 end)
+
+MainSection:NewToggle("Hand Rainbow", "inf buys hand rainbow", function(state)
+    if state then
+        getgenv().l = true
+while getgenv().l do
+wait(1)
+local args = {
+    [1] = "Hand Rainbow"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args))
+end
+    else
+        getgenv().l = false
+    end
+end)
+MainSection:NewToggle("Auto Buy Harambe", "inf buys Harambe", function(state)
+    if state then
+        getgenv().l = true
+while getgenv().l do
+wait(1)
+local args = {
+    [1] = "Box Toy Harambe"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args))
+end
+    else
+        getgenv().l = false
+    end
+end)
