@@ -1,0 +1,41 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Hell Hub | v1.3.6.3", "Ocean")
+
+-- MAIN
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("Main")
+MainSection:NewButton("Rainbow Hand", "Gives Rainbow Hand for 1m", function()
+    Game.ReplicatedStorage.RemoteEvents.BuyItemCash:FireServer
+"Hand Rainbow"
+end)
+MainSection:NewButton("F", "Gives F", function()
+    Game.ReplicatedStorage.RemoteEvents.BuyItemCash:FireServer
+"F"
+end)
+MainSection:NewButton("Harambe", "Free NFT", function()
+    Game.ReplicatedStorage.RemoteEvents.BuyItemCash:FireServer
+"Box Toy Harambe"
+end)
+MainSection:NewButton("Dupe", "dupes (piano needed)", function()
+while wait() 
+ do 
+Game.ReplicatedStorage.RemoteEvents.Equip:FireServer
+"Piano"
+    anything = true 
+  end
+  end)
+MainSection:NewToggle("Auto Buy F", "inf buys F", function(state)
+    if state then
+        getgenv().l = true
+while getgenv().l do
+wait(1)
+local args = {
+    [1] = "F"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args))
+end
+    else
+        getgenv().l = false
+    end
+end)
