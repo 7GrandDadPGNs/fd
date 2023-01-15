@@ -27,7 +27,7 @@ Game.ReplicatedStorage.RemoteEvents.Equip:FireServer
 
 local AutoBuy = Window:NewTab("AutoBuy")
 local AutoBuySection = AutoBuy:NewSection("AutoBuy")
-MainSection:NewToggle("Auto Buy F", "inf buys F", function(state)
+AutoBuySection:NewToggle("Auto Buy F", "inf buys F", function(state)
     if state then
         getgenv().l = true
 while getgenv().l do
@@ -42,7 +42,7 @@ end
         getgenv().l = false
     end
 end)
-MainSection:NewToggle("Auto Buy RB Hand", "inf buys RB Hand", function(state)
+AutoBuySection:NewToggle("Auto Buy RB Hand", "inf buys RB Hand", function(state)
     if state then
         getgenv().l = true
 while getgenv().l do
@@ -57,7 +57,7 @@ end
         getgenv().l = false
     end
 end)
-MainSection:NewToggle("Auto Buy Harambe", "inf buys Harambe", function(state)
+AutoBuySection:NewToggle("Auto Buy Harambe", "inf buys Harambe", function(state)
     if state then
         getgenv().l = true
 while getgenv().l do
