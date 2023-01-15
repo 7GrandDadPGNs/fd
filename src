@@ -24,6 +24,9 @@ Game.ReplicatedStorage.RemoteEvents.Equip:FireServer
     anything = true 
   end
   end)
+
+local AutoBuy = Window:NewTab("AutoBuy")
+local AutoBuySection = AutoBuy:NewSection("AutoBuy")
 MainSection:NewToggle("Auto Buy F", "inf buys F", function(state)
     if state then
         getgenv().l = true
@@ -69,3 +72,4 @@ end
         getgenv().l = false
     end
 end)
+
